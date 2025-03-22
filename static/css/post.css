@@ -1,0 +1,57 @@
+/* static/css/animal_print.css */
+
+body {
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas por fila */
+    gap: 20px; /* Espacio entre los posts */
+}
+
+.post {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #5c3a21;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    background: url('https://www.transparenttextures.com/patterns/leopard.png');
+    padding: 10px;
+    border-radius: 5px;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.4;
+    margin: 10px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #5c3a21;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 200px; /* Tamaño fijo para las imágenes */
+    height: 200px; /* Tamaño fijo para las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+}
