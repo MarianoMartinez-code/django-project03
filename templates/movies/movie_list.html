@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Películas</title>
+    <link rel="stylesheet" href="{% static 'css/movie_list.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Catálogo de Películas</h1>
+        <div class="movie-grid">
+            {% for movie in object_list %}
+                <div class="movie-card">
+                    <img src="{{ movie.imagen.url }}" alt="{{ movie.titulo }}">
+                    <div class="movie-info">
+                        <h2 class="movie-title">{{ movie.titulo }}</h2>
+                        <!-- Puedes agregar más detalles aquí, como descripción o año -->
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

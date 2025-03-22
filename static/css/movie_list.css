@@ -1,0 +1,77 @@
+body {
+    background-color: #1a1a1a; /* Fondo oscuro para un look moderno */
+    font-family: 'Arial', sans-serif;
+    color: #ffffff; /* Texto blanco */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #e50914; /* Rojo similar al de Netflix */
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas por fila */
+    gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.movie-card {
+    background-color: #333; /* Fondo oscuro para las tarjetas */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Para alinear el contenido verticalmente */
+}
+
+.movie-card:hover {
+    transform: translateY(-10px); /* Efecto de levitación al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+.movie-card img {
+    width: 100%;
+    height: 300px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+    display: block;
+}
+
+.movie-info {
+    padding: 15px;
+    text-align: center;
+    flex-grow: 1; /* Para que el contenido ocupe el espacio restante */
+}
+
+.movie-title {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #e50914; /* Rojo similar al de Netflix */
+}
+
+/* Estilos para botones o enlaces (opcional) */
+.movie-info a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #e50914;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.movie-info a:hover {
+    background-color: #b20710; /* Rojo más oscuro al pasar el mouse */
+}
