@@ -7,3 +7,8 @@ from movies.models import Pelicula
 class MovieListView(ListView):
     model = Pelicula
     template_name = "movies/movie_list.html"
+
+class MovieDetailView(DetailView):
+    model = Pelicula
+    template_name = "movies/movie_detail.html"
+    

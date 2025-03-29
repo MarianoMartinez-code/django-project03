@@ -14,9 +14,9 @@
         <div class="movie-grid">
             {% for movie in object_list %}
                 <div class="movie-card">
-                    <img src="{{ movie.imagen.url }}" alt="{{ movie.titulo }}">
+                    <a href="{% url 'movie_detail' movie.pk %}"><img src="{{ movie.imagen.url }}" alt="{{ movie.titulo }}"></a>
                     <div class="movie-info">
-                        <h2 class="movie-title">{{ movie.titulo }}</h2>
+                        <h2 class="movie-title"><a href="{% url 'movie_detail' movie.pk %}">{{ movie.titulo }}</a></h2>
                         <!-- Puedes agregar más detalles aquí, como descripción o año -->
                     </div>
                 </div>

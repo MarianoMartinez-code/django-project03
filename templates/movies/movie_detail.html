@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ pelicula.titulo }}</title>
+    <link rel="stylesheet" href="{% static 'css/movie_detail.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="movie-header">
+            <h1 class="movie-title">{{ pelicula.titulo }}</h1>
+            <img src="{{ pelicula.imagen.url }}" alt="{{ pelicula.titulo }}" class="movie-poster">
+        </div>
+        
+        <div class="movie-details">
+            <p><strong>Descripción:</strong> {{ pelicula.descripcion }}</p>
+            <p><strong>Director:</strong> {{ pelicula.director }}</p>
+            <p><strong>Año:</strong> {{ pelicula.año_lanzamiento }}</p>
+            <p><strong>Género:</strong> {{ pelicula.genero }}</p>
+            <p><strong>Duración:</strong> {{ pelicula.duracion }} minutos</p>
+            <a href="{% url 'movie_list' %}" class="back-button">Volver al catálogo</a>
+        </div>
+    </div>
+</body>
+</html>
